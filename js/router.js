@@ -21,6 +21,15 @@ document.querySelector('#service-link').addEventListener('click', (event) => {
     history.pushState(stateObj, "services", "?Services");
     RenderServicesPage();
 });
+
+document.querySelector('#home-link').addEventListener('click', (event) => {
+    let stateObj = {
+        page: 'home'
+    }
+    document.title = 'Home';
+    history.pushState(stateObj, "home", "?Home");
+    RenderHomePage();
+});
 // #endregion
 
 // #region View-Renderers
